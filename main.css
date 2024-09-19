@@ -1,0 +1,245 @@
+@import url('./fonts.css');
+
+/* reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* reset */
+
+/* reuse action-button */
+.action-button {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  outline: none;
+}
+
+.action-button__text {
+  margin-right: 8px;
+  border-bottom: 2px solid transparent;
+}
+
+.action-button:hover .action-button__text,
+.action-button:focus .action-button__text,
+.action-button:active .action-button__text {
+  border-bottom: 2px solid #b8ffec;
+}
+
+.action-button__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff3e79;
+  outline: none;
+  transition: filter 0.3s;
+}
+
+.action-button:hover .action-button__icon,
+.action-button:focus .action-button__icon,
+.action-button:active .action-button__icon {
+  filter: grayscale(50%);
+}
+
+/* types images */
+.action-button__icon--close {
+  position: relative;
+}
+
+.action-button__icon--close::before,
+.action-button__icon--close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 20px;
+  width: 2px;
+  background-color: #fff;
+}
+.action-button__icon--close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.action-button__icon--close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.action-button__icon--search {
+  background: #ff3e79 url('images/search.svg') no-repeat center;
+}
+
+.action-button__icon--phone {
+  background: #ff3e79 url('images/phone.svg') no-repeat center;
+}
+
+.action-button__icon--message {
+  background: #ff3e79 url('images/message.svg') no-repeat center;
+}
+
+.action-button__icon--contact {
+  background: #ff3e79 url('images/contact.svg') no-repeat center;
+}
+/* types images */
+
+.action-button__img {
+  max-width: 100%;
+  height: auto;
+}
+/* reuse action-button */
+
+html {
+  font-family: 'TT Lakes', sans-serif;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #1b1c21;
+}
+
+.aside-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+  line-height: 150%;
+  box-shadow: 16px 0 52px #0e185033;
+}
+
+.aside-menu__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.aside-menu__header {
+  display: flex;
+  align-items: center;
+  min-height: 88px;
+  padding: 18px 24px;
+}
+
+.aside-menu__header > .action-button:first-of-type {
+  margin-right: 16px;
+}
+
+.logo__img {
+  width: 96px;
+  height: 51px;
+}
+
+.aside-menu__logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.aside-menu__nav-link {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  color: inherit;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.aside-menu__nav-link:hover:not(.aside-menu__nav-link--active),
+.aside-menu__nav-link:focus:not(.aside-menu__nav-link--active),
+.aside-menu__nav-link:active:not(.aside-menu__nav-link--active) {
+  background-color: #41f6d722;
+}
+
+.aside-menu__nav-link--active {
+  color: #7e7e82;
+}
+
+.aside-menu__nav-link--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 32px;
+  margin-right: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #41f6d7;
+}
+
+.aside-menu__footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  padding: 16px 24px;
+}
+
+.aside-menu__buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.aside-menu__email,
+.aside-menu__phone {
+  color: inherit;
+}
+
+.aside-menu__email {
+  margin-top: 16px;
+}
+
+.aside-menu__phone {
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.aside-menu__languages {
+  display: flex;
+  gap: 7px;
+  margin-top: 8px;
+  font-size: 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .aside-menu__languages {
+    margin-top: 40px;
+  }
+}
+
+.aside-menu__language-button {
+  font-size: inherit;
+  text-transform: uppercase;
+}
+
+.aside-menu__language-button--active {
+  color: #7e7e82;
+}
