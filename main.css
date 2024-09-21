@@ -9,12 +9,11 @@ body {
   margin: 0;
 }
 
+/* сбрасывающие стили можно по тегам? */
 button {
   padding: 0;
   border: none;
   background-color: transparent;
-  color: inherit;
-  cursor: pointer;
 }
 
 ul {
@@ -36,6 +35,8 @@ a {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
+  color: inherit;
+  cursor: pointer;
   outline: none;
 }
 
@@ -209,13 +210,16 @@ html {
   gap: 16px;
 }
 
-.aside-menu__email,
-.aside-menu__phone {
-  color: inherit;
+.aside-menu__contacts {
+  margin-top: 16px;
+  font-style: normal;
 }
 
-.aside-menu__email {
-  margin-top: 16px;
+.aside-menu__email,
+.aside-menu__phone {
+  display: block;
+  color: inherit;
+  font-style: inherit;
 }
 
 .aside-menu__phone {
@@ -224,7 +228,7 @@ html {
   font-size: 2.4rem;
 }
 
-.aside-menu__languages {
+.switcher-languages {
   display: flex;
   gap: 7px;
   margin-top: 8px;
@@ -232,16 +236,18 @@ html {
 }
 
 @media (min-width: 768px) {
-  .aside-menu__languages {
+  .switcher-languages {
     margin-top: 40px;
   }
 }
 
-.aside-menu__language-button {
+.switcher-languages__button {
   font-size: inherit;
   text-transform: uppercase;
+  color: inherit;
+  cursor: pointer;
 }
 
-.aside-menu__language-button--active {
+.switcher-languages__button--active {
   color: #7e7e82;
 }

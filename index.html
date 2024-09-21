@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <div class="aside-menu aside-menu--open">
+    <aside class="aside-menu aside-menu--open">
       <div class="aside-menu__inner">
-        <div class="aside-menu__header">
+        <header class="aside-menu__header">
           <button class="action-button">
             <div class="action-button__icon action-button__icon--close"></div>
           </button>
@@ -21,7 +21,7 @@
           <button class="action-button">
             <div class="action-button__icon action-button__icon--search"></div>
           </button>
-        </div>
+        </header>
 
         <nav class="aside-menu__nav">
           <ul class="aside-menu__nav-list">
@@ -58,7 +58,7 @@
           </ul>
         </nav>
 
-        <div class="aside-menu__footer">
+        <footer class="aside-menu__footer">
           <ul class="aside-menu__buttons">
             <li class="aside-menu__buttons-button">
               <button class="aside-menu__action-button action-button">
@@ -83,30 +83,32 @@
             </li>
           </ul>
 
-          <a class="aside-menu__email" href="mailto:mail@cps.com"
-            >mail@cps.com</a
-          >
-          <a class="aside-menu__phone" href="tel:mail@cps.com"
-            >8 800 890 8900</a
-          >
+          <address class="aside-menu__contacts">
+            <a class="aside-menu__email" href="mailto:mail@cps.com"
+              >mail@cps.com</a
+            >
+            <a class="aside-menu__phone" href="tel:mail@cps.com"
+              >8 800 890 8900</a
+            >
+          </address>
 
-          <ul class="aside-menu__languages" lang="en">
-            <li class="aside-menu__language">
+          <ul class="switcher-languages" lang="en">
+            <li class="switcher-languages__language">
               <button
-                class="aside-menu__language-button aside-menu__language-button--active"
+                class="switcher-languages__button switcher-languages__button--active"
               >
                 ru
               </button>
             </li>
-            <li class="aside-menu__language">
-              <button class="aside-menu__language-button">en</button>
+            <li class="switcher-languages__language">
+              <button class="switcher-languages__button">en</button>
             </li>
-            <li class="aside-menu__language">
-              <button class="aside-menu__language-button">ch</button>
+            <li class="switcher-languages__language">
+              <button class="switcher-languages__button">ch</button>
             </li>
           </ul>
-        </div>
+        </footer>
       </div>
-    </div>
+    </aside>
   </body>
 </html>
